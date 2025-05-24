@@ -1,0 +1,94 @@
+baseURL: https://minorsevenflatfive.github.io
+languageCode: en-us
+title: My New Hugo Site
+theme: PaperMod
+
+# Enable features
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+# Navigation
+menu:
+  main:
+    - identifier: posts
+      name: Posts
+      url: /posts/
+      weight: 10
+    - identifier: archives
+      name: Archives
+      url: /archives/
+      weight: 20
+    - identifier: tags
+      name: Tags
+      url: /tags/
+      weight: 30
+    - identifier: search
+      name: Search
+      url: /search/
+      weight: 40
+
+params:
+  env: production
+  title: My Blog
+  description: A personal blog about technology, programming, and more
+  keywords: [Blog, Portfolio, PaperMod]
+  author: Your Name
+  DateFormat: January 2, 2006
+  defaultTheme: auto
+  disableThemeToggle: false
+  ShowReadingTime: true
+  ShowShareButtons: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowWordCount: true
+  ShowRssButtonInSectionTermList: true
+  UseHugoToc: true
+
+  # Layout Settings
+  layoutStyle: sidebar  # Added to indicate we're using sidebar layout
+  mainSections: ["posts"]
+  
+  # Enable Search
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    keys: [title, permalink, summary, content]
+
+  profileMode:
+    enabled: false  # Disabled since we're using sidebar
+    title: My Blog
+    subtitle: Welcome to my personal blog!
+    imageUrl: ""
+    imageTitle: my image
+    imageWidth: 120
+    imageHeight: 120
+    buttons:
+      - name: Posts
+        url: posts
+      - name: Tags
+        url: tags
+
+  homeInfoParams:
+    Title: Welcome 👋
+    Content: This is my personal blog where I share my thoughts and experiences about technology, programming, and more.
+
+  socialIcons:
+    - name: github
+      url: https://github.com/minorsevenflatfive
+
+  cover:
+    hidden: true  # Hide cover images since we're using sidebar layout
+    hiddenInList: true
+    hiddenInSingle: true
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true 
