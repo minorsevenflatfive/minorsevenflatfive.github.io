@@ -1,6 +1,6 @@
-baseURL: https://minorsevenflatfive.github.io
-languageCode: en-us
-title: My New Hugo Site
+baseURL: "/"
+languageCode: "en-us"
+title: "My Hugo Site"
 theme: PaperMod
 
 # Enable features
@@ -92,3 +92,8 @@ markup:
   goldmark:
     renderer:
       unsafe: true 
+
+# Configure image caching
+caches:
+  images:
+    dir: ":cacheDir/images" 
