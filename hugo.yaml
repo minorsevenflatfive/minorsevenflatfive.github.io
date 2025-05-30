@@ -1,7 +1,12 @@
-baseURL: 'https://example.org/'
+baseURL: 'https://minorsevenflatfive.github.io/'
 languageCode: 'en-us'
 title: 'Bramanta Nararya'
 theme: 'hugo-theme-console-extended'
+
+# Cache configuration for GitHub Pages deployment
+caches:
+  images:
+    dir: :cacheDir/images
 
 params:
   # Customize the theme
@@ -13,5 +18,5 @@ params:
       url: "posts/"
     - name: "projects/"
       url: "projects/"
-    - name: "photos/"
-      url: "photos/" 
+    # - name: "photos/"
+    #   url: "photos/" 
